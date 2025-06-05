@@ -1,3 +1,4 @@
+using TaskManager.Application.Contracts;
 using TaskManager.Infrastructure.Repositories;
 
 namespace TaskManager.Infrastructure.Uow;

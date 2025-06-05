@@ -1,12 +1,30 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace TaskManager.Domain.Entities;
 
 public class ApplicationUser
 {
-    public string Email { get; init; }
+    [Key]
+    public string Id { get; set; } = Guid.NewGuid().ToString();
 
-    public string FirstName { get; init; }
+    [Required]
+    [EmailAddress]
+    [MaxLength(256)]
+    public string Email { get; set; } 
 
-    public string LastName { get; init; }
+    [Required]
+    [MaxLength(50)]
+    public string FirstName { get; set; } 
 
+    [Required]
+    [MaxLength(50)]
+    public string LastName { get; set; }
+
+    [Required]
+    [MaxLength(512)]
+    public string PasswordHash { get; set; }
+
+    [NotMapped]
     public string FullName => $"{FirstName} {LastName}";
 }

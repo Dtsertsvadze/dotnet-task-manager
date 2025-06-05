@@ -1,6 +1,4 @@
-using TaskManager.Infrastructure.Repositories;
-
-namespace TaskManager.Infrastructure.Uow;
+namespace TaskManager.Application.Contracts;
 
 public interface IUnitOfWork
 {

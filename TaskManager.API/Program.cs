@@ -1,11 +1,13 @@
 using Scalar.AspNetCore;
-using TaskManager.Infrastructure;
+using TaskManager.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddServices(builder.Configuration);
+builder.Services.AddAuthentication(builder.Configuration);
 
 builder.Services.AddControllers();
 

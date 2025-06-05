@@ -1,4 +1,4 @@
-namespace TaskManager.Infrastructure.Repositories;
+namespace TaskManager.Application.Contracts;
 
 public interface IRepository<T> where T : class
 {

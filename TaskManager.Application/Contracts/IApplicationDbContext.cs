@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Domain.Entities;
 
-namespace TaskManager.Application.Common.Interfaces;
+namespace TaskManager.Application.Contracts;
 
 public interface IApplicationDbContext
 {

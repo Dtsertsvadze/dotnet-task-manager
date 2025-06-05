@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TaskManager.Application.Contracts;
 
 namespace TaskManager.Infrastructure.Repositories;
 
